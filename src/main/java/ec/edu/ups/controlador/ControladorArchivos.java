@@ -1,5 +1,9 @@
 package ec.edu.ups.controlador;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -33,8 +37,6 @@ public class ControladorArchivos {
                 texto+=" ";
             } 
         }
-
-        
         return texto;
     }
      
@@ -48,6 +50,25 @@ public class ControladorArchivos {
             diccionarioEncriptado.put(letras[i], encriptado[i]);
         }
         
+    }
+    
+    public String leerTexto(String rutaT){
+        try{
+            FileReader archivoLectura= new FileReader(rutaT);
+            BufferedReader lectuta= new BufferedReader(archivoLectura);String linea="";
+            while(linea!=null){
+                linea=lectuta.readLine();
+                return linea;
+            }
+            lectuta.close();
+        }catch(FileNotFoundException e1){
+            System.out.println("Ruta de archivo no encontrada");
+        }catch(IOException e2){
+            System.out.println("Error de lectura");
+        }catch(Exception e3){
+            System.out.println("Error General");
+        }
+        return null;
     }
     
 }
