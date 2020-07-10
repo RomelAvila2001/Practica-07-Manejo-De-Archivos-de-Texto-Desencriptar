@@ -78,6 +78,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jScrollPane2.setViewportView(txtAreaTextoDesencriptado);
 
         btnDesencriptar.setText("Desencriptar Texto");
+        btnDesencriptar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDesencriptarActionPerformed(evt);
+            }
+        });
 
         jLabel2.setText("Texto Desencriptado");
 
@@ -195,6 +200,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             txtAreaTextoEncriptado.setText(controladorArchivos.leerTexto(txtRuta.getText()));
         }
     }//GEN-LAST:event_btnJFileChooserActionPerformed
+
+    private void btnDesencriptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDesencriptarActionPerformed
+        String textoDesencriptado= controladorArchivos.desencriparMensajeArchivo(txtAreaTextoEncriptado.getText());
+        txtAreaTextoDesencriptado.setText(textoDesencriptado);
+    }//GEN-LAST:event_btnDesencriptarActionPerformed
 
     /**
      * @param args the command line arguments
