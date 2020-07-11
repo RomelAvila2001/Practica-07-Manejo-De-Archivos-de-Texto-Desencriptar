@@ -8,18 +8,32 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- *
- * @author Estudiantes
+ * Clase ControladorArchivos.
+ * Esta clase permite desencriptar el mensaje guardado en un archivo ubicado en 
+ * cualquier ruta que decida el usuario.
+ * @author Romel Avila, Sebastian Uyaguari
  */
 public class ControladorArchivos {
 
     private Map<String, String> diccionarioEncriptado;
     
+    /**
+    * Metodo ControladorArchivos (Constructor).
+    * El metodo constructor inicializa el atributo diccionarioEncriptado, ademas 
+    * llena el diccionario con los datos correspondientes para poder encriptar.
+    */
     public ControladorArchivos() {
         diccionarioEncriptado = new HashMap<>();
         llenarDiccionario();
     }
     
+    /**
+     * Metodo desencriptarMensajeArchivo.
+     * El metodo desencripta el mensaje recibido como parametro cambiando las letras
+     * por un caracter especifico para despues retornar. 
+     * @param mensaje
+     * @return retorna una variable tipo String: texto
+     */ 
     public String desencriparMensajeArchivo(String mensaje){
         
         String texto="";
@@ -40,7 +54,12 @@ public class ControladorArchivos {
         return texto;
     }
      
-    
+    /**
+     * Metodo llenarDiccionario.
+     * Este metodo tiene la funcion de llenar el diccionario mediante dos vectores,
+     * el cual el primero es para asignar la clave o llave mientras que el segundo
+     * es para asignar el velor.
+     */
     public void llenarDiccionario(){
         String[] letras = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n",
         "o","p","q","r","s","t","u","v","w","x","y","z"," "};
@@ -52,6 +71,13 @@ public class ControladorArchivos {
         
     }
     
+    /**
+     * Metodo leerTexto.
+     * El metodo recibe como parametro la ruta en la cual esta el archivo en el cual
+     * obtiene el texto o cuerpo del archivo para ser retornado y desencriptarlo.
+     * @param rutaT
+     * @return retorna una variable tipo String: linea
+     */
     public String leerTexto(String rutaT){
         try{
             FileReader archivoLectura= new FileReader(rutaT);
