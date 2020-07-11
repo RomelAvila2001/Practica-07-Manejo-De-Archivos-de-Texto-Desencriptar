@@ -53,7 +53,8 @@ public class ControladorArchivos {
         }
         return texto;
     }
-     
+    
+    
     /**
      * Metodo llenarDiccionario.
      * Este metodo tiene la funcion de llenar el diccionario mediante dos vectores,
