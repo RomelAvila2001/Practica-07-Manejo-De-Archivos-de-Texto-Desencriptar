@@ -67,6 +67,9 @@ Este proyecto consta de 2 paquetes, el primero es del controlador y el segundo e
 
 ![8](https://user-images.githubusercontent.com/64879338/87239114-df963b00-c3d0-11ea-9137-496593218dcb.jpg)
 
+## javaDoc
+- file:///C:/Users/NANCY/Documents/NetBeansProjects/Practica-de-laboratorio-07-Gestion-de-Archivos-de-texto-en-Java-master/target/site/apidocs/allpackages-index.html
+- file:///C:/Users/NANCY/Documents/NetBeansProjects/Practica07-GestionDeArchivosDeTextoParte2/target/site/apidocs/allpackages-index.html
 ## RESULTADO(S) OBTENIDO(S): 
 - Al finalizar la práctica los estudiantes podrán conocer varios métodos de la clase File de Java que permite manipular  directorios del sistema operativo utilizando una ruta base. 
 ## CONCLUSIONES:  
